@@ -1,0 +1,21 @@
+<div class="form-group bg-dark text-white">
+    <label class="m-1" for="nameSelect">Select Name</label>
+    <select class="form-control-sm" id="nameSelect">
+        <option *ngFor="let stud of stock">{{stud.name}}</option>
+    </select>
+
+    <label class="m-1" for="rollSelect" >Select Roll</label>
+    <select class="form-control-sm" id="rollSelect">
+        <option *ngFor="let roll of rolls">{{roll}}</option>
+    </select>
+
+    <label class="m-1" for="sectionSelect">Select Section</label>
+    <select class="form-control-sm" id="sectionSelect">
+        <option *ngFor="let section of sections">{{section}}</option>
+    </select>
+
+    <label class="m-1" for="classSelect" >Select Class</label>
+    <select class="form-control-sm" id="classSelect">
+        <option *ngFor="let studentClass of studentClasses">{{studentClass}}</option>
+    </select>
+</div>

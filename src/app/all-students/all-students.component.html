@@ -1,0 +1,56 @@
+<table class="table table-striped table-hover table-bordered">
+    <thead class="rblue text-white">
+      <tr><th>Name</th><th>Section</th><th>Class</th><th>Blood Group</th><th>Birth Date</th><th>Father</th><th>Mother</th><th>City</th><th>Country</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students" (mouseover)="m_student_name = student.name; hovered = true">
+        <td>{{student.name}}</td>
+        <td>{{student.section}}</td>
+        <td>{{student.studentClass}}</td>
+        <td>{{student.bloodGroup}}</td>
+        <td>{{student.birthDate}}</td>
+        <td>{{student.father}}</td>
+        <td>{{student.mother}}</td>
+        <td>{{student.city}}</td>
+        <td>{{student.country}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div *ngIf="hovered" class="bg-dark text-center text-white m-1">
+    <p class="p-1">Selected Student Name: {{m_student_name}}</p>
+  </div>
+  
+  <div class="form-group">
+    <h3 class="sgreen text-center text-white p-2 m-1">Search Student</h3>
+    <label>Roll</label>
+    <input [(ngModel)]="m_roll" class="form-control-sm m-1" />
+    <label>Section</label>
+    <input [(ngModel)]="m_section" class="form-control-sm m-1" />
+    <label>Class</label>
+    <input [(ngModel)]="m_class" class="form-control-sm m-1" />
+    <button class="btn btn-danger btn-sm mb-1" (click)="findStudent(m_class, m_section, m_roll); submited=true">Submit</button>
+  </div>
+  <div *ngIf="submited">
+    <table *ngIf="m_student" class="table table-dark table-bordered table-striped">
+      <thead class="sblue text-white text-center">
+        <tr><th colspan="2">Student Info</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Name</td><td>{{m_student.name}}</td></tr>
+        <tr><td>Roll</td><td>{{m_student.roll}}</td></tr>
+        <tr><td>Section</td><td>{{m_student.section}}</td></tr>
+        <tr><td>Class</td><td>{{m_student.studentClass}}</td></tr>
+        <tr><td>Blood Group</td><td>{{m_student.bloodGroup}}</td></tr>
+        <tr><td>Birth Date</td><td>{{m_student.birthDate}}</td></tr>
+        <tr *ngIf="m_student.studentClass == 10"><td>GPA</td><td>{{m_student.sscGpa}}</td></tr>
+        <tr><td>Father</td><td>{{m_student.father}}</td></tr>
+        <tr><td>Mother</td><td>{{m_student.mother}}</td></tr>
+        <tr><td>City</td><td>{{m_student.city}}</td></tr>
+        <tr><td>Country</td><td>{{m_student.country}}</td></tr>
+      </tbody>
+    </table>
+    <h3 *ngIf="!m_student" class="bg-warning text-center text-white">No Student Was Found!</h3>
+    
+  </div>
+  

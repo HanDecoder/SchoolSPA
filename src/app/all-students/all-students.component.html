@@ -22,14 +22,16 @@
   </div>
   
   <div class="form-group">
-    <h3 class="sgreen text-center text-white p-2 m-1">Search Student</h3>
-    <label>Roll</label>
-    <input [(ngModel)]="m_roll" class="form-control-sm m-1" />
-    <label>Section</label>
-    <input [(ngModel)]="m_section" class="form-control-sm m-1" />
-    <label>Class</label>
-    <input [(ngModel)]="m_class" class="form-control-sm m-1" />
-    <button class="btn btn-danger btn-sm mb-1" (click)="findStudent(m_class, m_section, m_roll); submited=true">Submit</button>
+    <h5 class="text-center bg-dark text-white p-2 m-1">Search Student</h5>
+    <div class="text-white m-1">
+      <label>Roll</label>
+      <input [(ngModel)]="m_roll" class=" m-1" />
+      <label>Section</label>
+      <input [(ngModel)]="m_section" class=" m-1" />
+      <label>Class</label>
+      <input [(ngModel)]="m_class" class=" m-1" />
+      <button class="button" (click)="findStudent(m_class, m_section, m_roll); submited=true">Submit</button>
+    </div>
   </div>
   <div *ngIf="submited">
     <table *ngIf="m_student" class="table table-dark table-bordered table-striped">

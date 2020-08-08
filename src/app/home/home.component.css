@@ -33,6 +33,17 @@
     outline: 0;
 }
 
-img {
-    min-width: 100%;
+div {
+    position: relative;
+}
+div p {
+    position: relative;
+    z-index: 4;
+    top: 30%;
+    left: 30%;
+    font-size: 34px;
+    font-weight: 500;
+    font-family: arial;
+    font-style: italic;
+    color: crimson;
 }

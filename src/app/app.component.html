@@ -1,6 +1,7 @@
 <div>
   <header>
     <h1>{{title}}</h1>
+    <img class="logo" src="../assets/gallery/kd-logo.png" alt="logo">
   </header>
   <div class="sidenav">
     <nav>
@@ -8,12 +9,12 @@
       <a routerLink="/sortByClass" routerLinkActive="text-white">List By Class</a> 
       <a routerLink="/allStudents" routerLinkActive="text-white">List All Students</a> 
       <a routerLink="/filter" routerLinkActive="text-white">Filter Students</a>
+      <a routerLink="/gallery" routerLinkActive="text-white">Gallery</a>
     </nav>
   </div>
-  <div class="main pl-0">
-    <br><br><br><br>
+  <div class="main pl-0 top-bottom-space">
+    <div class="bar-c"><p class="bar">Latest Notice: *** All forms of activities are shutdown due to the COVID-19 outbreak. ***</p></div>
     <router-outlet></router-outlet>
-    <br>
     <h3 class="footer text-white text-center p-2 pb-0 mb-0">Copyright © 2020 Naogaon K.D Govt. High School all rights reserved</h3>
   </div>
 </div>

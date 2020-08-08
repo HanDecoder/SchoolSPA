@@ -13,3 +13,48 @@ html, body, app-root {
     .sblue {
         background-color: steelblue;
     }
+    .table {
+        font-size: small;
+    }
+body {
+    background: #eee;
+}
+input {
+    border: 2px solid royalblue ;
+    margin: 20px 0;
+    padding: 3px 10px;
+    font-size: 24px;
+    border-radius: 28px;
+}
+input:focus {
+    outline: none;
+    border-color: darkcyan;
+}
+.button {
+    transition: 0.3s;
+    border-radius: 35px;
+    background-color: slateblue;
+    color: snow;
+} 
+.button:hover {
+    transform: rotate(360deg);
+}
+.button:focus {
+    outline: none;
+}
+header h1 {
+    transition: 0.3s;
+    cursor: crosshair;
+}
+header h1:hover {
+    transform: rotate(360deg);
+}
+.bg-image {
+    background-image: url(./assets/KD_school.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.table {
+    background-color: snow;
+}

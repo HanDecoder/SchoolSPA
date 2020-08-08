@@ -9,6 +9,7 @@ import { ListByClassComponent } from './list-by-class/list-by-class.component';
 import { AllStudentsComponent } from './all-students/all-students.component';
 import { FindStudentComponent } from './find-student/find-student.component';
 import { HomeComponent } from './home/home.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     ListByClassComponent,
     AllStudentsComponent,
     FindStudentComponent,
-    HomeComponent
+    HomeComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
